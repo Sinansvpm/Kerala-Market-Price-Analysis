@@ -1,0 +1,145 @@
+Kerala Market Price Analysis Dashboard
+Objective
+
+The objective of this project is to analyze Kerala’s commodity market pricing trends using Power BI.
+The dashboard provides insights into:
+
+Price variation across markets (Min, Max, Modal Price)
+
+Commodity-level price trends over time
+
+Market distribution and commodity contribution
+
+Price stability (Volatility %)
+
+Top-performing commodities based on average price
+It helps traders, farmers, analysts, and government agencies understand pricing behavior and market patterns.
+
+Dataset
+
+Source: Kerala Market Sales Data (CSV file provided)
+
+Number of Rows: ~146,900
+
+Number of Columns: 10
+
+Key Columns:
+
+State
+
+District
+
+Market
+
+Commodity
+
+Variety
+
+Grade
+
+Arrival_Date
+
+Min_Price
+
+Max_Price
+
+Modal_Price
+
+Folder Structure
+Kerala-Market-Price-Analysis/
+│
+├── BRD/
+│   └── BRD_Submitted.pdf
+│
+├── FRD/
+│   └── FRD_Submitted.pdf
+│
+├── Data/
+│   ├── raw/
+│   │   └── Market Sales Data.csv
+│   ├── cleaned/
+│   │   └── cleaned_dataset.csv
+│   └── assessment/
+│       └── Column_Assessment.xlsx
+│
+├── Visuals/
+│   └── Dashboard_Mockup.pptx
+│
+├── PowerBI/
+│   ├── pbix/
+│   │   └── Kerala_Market_Dashboard.pbix
+│   └── exports/
+│       └── Dashboard_Report.pdf
+│
+├── Reports/
+│   └── Analysis_Report.pdf
+│
+├── Scripts/
+│   └── dax_measures.txt
+│
+└── README.md
+
+Steps to Reproduce
+1. Assess & Clean Dataset
+
+Check missing values
+
+Standardize text fields (Commodity, Market, Variety)
+
+Convert Arrival_Date to date format
+
+Export cleaned data to Data/cleaned/
+
+2. Design Dashboard Mockups
+
+Create layout in PPT/Canva/Figma
+
+Decide KPI cards, charts, slicer positions
+
+Save mockup to Visuals/
+
+3. Build Power BI Dashboard & Data Model
+
+Import cleaned dataset
+
+Create DAX measures: Total Prices, Volatility %, Rankings, etc.
+
+Build visualizations:
+
+KPI Cards
+
+Bar Charts
+
+Line Trend Chart
+
+Donut Chart
+
+Max vs Min Comparison
+
+Price Stability
+
+Detailed Table
+
+Format theme & interactions
+
+4. Export Reports & Prepare Analysis Report
+
+Export PBIX → PDF report
+
+Add screenshots and document insights
+
+Finalize analysis report in Reports/
+
+Key Insights / Learnings
+
+Black Pepper, Arecanut, and Coconut Oil dominate Kerala’s market volume.
+
+Modal price trends show significant fluctuations across years (high seasonality).
+
+Arecanut and Pepper show extremely high price volatility (unstable pricing).
+
+Cashewnuts, Pepper garbled have more stability compared to spices.
+
+Dataset reveals strong market dependency on certain commodities.
+
+Power BI’s DAX calculations help uncover price gaps and ranking insights.
