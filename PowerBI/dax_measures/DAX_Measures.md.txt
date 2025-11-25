@@ -1,0 +1,29 @@
+Total Min Price = SUM('Market Sales Data'[Min Price]).
+
+Total Max Price = SUM('Market Sales Data'[Max Price]).
+
+Total Modal Price = SUM('Market Sales Data'[Modal Price]).
+
+Total Markets = DISTINCTCOUNT('Market Sales Data'[Market]).
+
+Total Commodities = DISTINCTCOUNT('Market Sales Data'[Commodity]).
+
+Average Modal Price = AVERAGE('Market Sales Data'[Modal_Price]).
+
+Avg Price by Commodity = CALCULATE(AVERAGE('Market Sales Data'[Modal_Price]),ALLEXCEPT('Market Sales Data', 'Market Sales Data'[Commodity])).
+
+Latest Modal Price = VAR LatestDate = MAX('Market Sales Data'[Arrival_Date])RETURN
+CALCULATE(AVERAGE('Market Sales Data'[Modal_Price]),'Market Sales Data'[Arrival_Date] = LatestDate).
+
+Price Difference = SUM('Market Sales Data'[Max_Price])- SUM('Market Sales Data'[Min_Price])
+
+Price Volatility % = DIVIDE((SUM('Market Sales Data'[Max_Price]) - SUM('Market Sales Data'[Min_Price])),SUM('Market Sales Data'[Modal_Price])).
+
+Rank Commodity = RANKX(ALL('Market Sales Data'[Commodity]),CALCULATE(AVERAGE('Market Sales Data'[Modal_Price])),,DESC).
+
+Selected Commodity Price = 
+CALCULATE(AVERAGE('Market Sales Data'[Modal_Price]),ALLSELECTED('Market Sales Data')).
+
+Selected Market Min Price = 
+CALCULATE(MIN('Market Sales Data'[Min_Price]),ALLSELECTED('Market Sales Data')).
+
